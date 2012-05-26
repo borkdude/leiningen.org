@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Leiningen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="for automating Clojure projects without setting your hair on fire.">
+    <meta name="author" content="Phil Hagelberg and contributors">
+
+    <link href="http://fonts.googleapis.com/css?family=Galdeano" 
+          rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Neuton:400,700"
+          rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata"
+          rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/lein.css" rel="stylesheet">
+    <link href="css/htmlize.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Leiningen</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="install.html">Install</a></li>
+              <li><a href="tutorial.html">Tutorial</a></li>
+              <li><a href="configuration.html">Configuration</a></li>
+              <li><a href="community.html">Community</a></li>
+              <li><a href="reference.html">Reference</a></li>
+              <li><a href="https://github.com/technomancy/leiningen">Source</a></li>
+              <li><a href="https://github.com/technomancy/leiningen/issues">Issues</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span8">
+          <h1>Installation on Windows</h1>
+          <p>To install leiningen on Windows follow these steps:</p>
+          <ol>
+          	<li><a href="https://github.com/technomancy/leiningen/raw/preview/bin/lein.bat">Download the leiningen script</a>. 
+          	This is a <tt>.bat</tt> file which you can call from the command prompt. <h3>Detailed instruction</h3>
+          	<p>The default name of this script is <tt>lein</tt>. 
+          	If you are working with multiple versions of leiningen you are free to rename this script for a specific version, e.g. <tt>lein2</tt>. 
+          
+          	On the third line of the script there is a version variable. This is set to the newest version by default. 
+          	You can change it if you want to work with a specific version of leiningen for whatever reason.</p></li>
+          	
+			<li>Place the script on your <tt>PATH</tt>.
+			<h3>Detailed instruction</h3>
+			<p>One way to do this is to make a directory for the leiningen script to reside in, e.g. <tt>c:\Program Files\leiningen</tt>. 
+			Place the script in the directory.</p> 
+			Then change the <tt>PATH</tt> environment variable by appending <tt>;c:\Program Files\leiningen</tt> to it. 
+			More details on how to change the PATH variable per version of Windows can be found <a href="http://java.com/en/download/help/path.xml">here</a>.</li>
+			
+			<li>Download <a href="http://users.ugent.be/~bpuype/wget/"><tt>wget</tt></a> or <a href="http://curl.haxx.se/dlwiz/?type=bin&os=Win32&flav=-&ver=2000/XP"><tt>curl</tt></a> and make it available on the <tt>PATH</tt>. <h3>Detailed instruction</h3>
+			<p>For leiningen to work properly it needs a program that can download leiningen itself and of course dependencies of your projects.
+			Leiningen uses either <a href="http://users.ugent.be/~bpuype/wget/"><tt>wget</tt></a> or <a href="http://curl.haxx.se/dlwiz/?type=bin&os=Win32&flav=-&ver=2000/XP"><tt>curl</tt></a> to do this.
+			You can make a separate directory for this software and place it on the <tt>PATH</tt> like we did with the script in step 2, but since <tt>wget.exe</tt> is a single standalone file, I tend to just place it in <tt>C:\Program Files\leiningen</tt>, since that directory is on the <tt>PATH</tt> already.
+			</p></li>
+			
+			<li>
+			Open a command prompt and run <tt>lein self-install</tt>. <h3>Detailed instructions</h3>
+			<p>
+			Open a command prompt by choosing from the Start menu > Run and then enter <tt>cmd.exe</tt>. A command prompt will now show up.
+			Enter the command <tt>lein self-install</tt>. Leiningen will now download itself into a directory <tt>%USERPROFILE%/.lein/self-installs</tt>. <tt>%USERPROFILE%</tt> is an
+			environment variable which usually is set to your home directory. You can open this directory in the file explorer to see if leiningen succesfully downloaded itself.
+			</p>
+			</li>
+          </ol>
+          
+          <p>This is it! You can now use <tt>lein</tt> from the command prompt. Just type <tt>lein tutorial</tt> to get more information on how to use leiningen.</p>
+         
+
+          
+      <hr>
+
+      <footer>
+        <p>&copy; Phil Hagelberg and contributors 2012. Licensed under
+        the <a href="https://github.com/technomancy/leiningen/blob/master/COPYING">EPL 1.0</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>
