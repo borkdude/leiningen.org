@@ -57,12 +57,12 @@
       <div class="row">
         <div class="span8">
           <h1>Installation on Windows</h1>
-          <p>Leiningen comprises basically two parts: a script and a standalone jar file. To install leiningen on Windows follow these steps:</p>
+          <p>Leiningen comprises basically two parts: a script and a standalone jar file. It needs a Java Runtime version 1.6 or higher. To install leiningen on Windows follow these steps:</p>
           <ol>
-          	<li><a href="https://github.com/technomancy/leiningen/raw/preview/bin/lein.bat">Download the leiningen script</a>. 
+          	<li><a href="https://github.com/technomancy/leiningen/raw/preview/bin/lein.bat">Download the leiningen script for Windows</a>. 
           	This is a <tt>.bat</tt> file which you can call from the command prompt. <h3>Detailed instruction</h3>
-          	<p>The default name of this script is <tt>lein</tt>. 
-          	If you are working with multiple versions of leiningen you are free to rename this script for a specific version, e.g. <tt>lein2</tt>. 
+          	<p>The default name of this script is <tt>lein.bat</tt>. 
+          	If you are working with multiple versions of leiningen you are free to rename this script for a specific version, e.g. <tt>lein2.bat</tt>. 
           
           	On the third line of the script there is a version variable. This is set to the newest stable version by default. 
           	You can change it if you want to work with a specific version of leiningen for whatever reason.</p></li>
@@ -70,8 +70,8 @@
 			<li>Place the script on your <tt>PATH</tt>.
 			<h3>Detailed instruction</h3>
 			<p>One way to do this is to make a directory for the leiningen script to reside in, e.g. <tt>c:\Program Files\leiningen</tt>. 
-			Place the script in the directory.</p> 
-			Then change the <tt>PATH</tt> environment variable by appending <tt>;c:\Program Files\leiningen</tt> to it. 
+			Place the script inside the directory.</p> 
+			Then change the <tt>PATH</tt> environment variable by appending <tt>;c:\Program Files\leiningen</tt> to it, so the script can be called anywhere from the command prompt. 
 			More details on how to change the PATH variable per version of Windows can be found <a href="http://java.com/en/download/help/path.xml">here</a>.</li>
 			
 			<li>Download <a href="http://users.ugent.be/~bpuype/wget/"><tt>wget</tt></a> or <a href="http://curl.haxx.se/dlwiz/?type=bin&os=Win32&flav=-&ver=2000/XP"><tt>curl</tt></a> and make it available on the <tt>PATH</tt>. <h3>Detailed instruction</h3>
@@ -81,14 +81,14 @@
 			</p></li>
 			
 			<li>
-			Open a command prompt and run <tt>lein self-install</tt>. <h3>Detailed instructions</h3>
+			Open a new command prompt and run <tt>lein self-install</tt>. <h3>Detailed instructions</h3>
 			<p>
-			Open a command prompt by choosing from the Start menu > Run and then enter <tt>cmd.exe</tt>. A command prompt will now show up.
-			Enter the command <tt>lein self-install</tt>. The script will now download the standalone jar file into a directory <tt>%USERPROFILE%/.lein/self-installs</tt>. The environment variable <tt>%USERPROFILE%</tt> is an
-			is set to your home directory. If you chose to manually download a standalone jar file from <a href="https://github.com/technomancy/leiningen/downloads">github</a>, you need to move it  <tt>%USERPROFILE%/.lein/self-installs</tt> yourself.
+			Open a new command prompt by choosing from the Start menu > Run and then enter <tt>cmd.exe</tt>. A command prompt will now show up.
+			Enter the command <tt>lein self-install</tt>. The script will now download the standalone jar file into a directory <tt>%USERPROFILE%/.lein/self-installs</tt>. The environment variable <tt>%USERPROFILE%</tt> is
+			set to your home directory. If you chose to manually download a standalone jar file from <a href="https://github.com/technomancy/leiningen/downloads">github</a>, you need to move it  <tt>%USERPROFILE%/.lein/self-installs</tt> yourself.
 			</p>
 			</li>
-			<li>From the command promp run the command <tt>lein version</tt>. Leiningen should now print the version that was currently installed.</li>
+			<li>From the command promp run the command <tt>lein version</tt> (or, of course,  <tt>lein2 version</tt> in case you renamed the script to <tt>lein2.bat</tt>). Leiningen should now print the version that was currently installed.</li>
           </ol>
           
           <p>This is it! You can now use <tt>lein</tt> from the command prompt. Just type <tt>lein tutorial</tt> to get more information on how to use leiningen.</p>
@@ -98,10 +98,10 @@
          <ol>
          <li>To assure you have a recent <tt>.bat</tt> script (with the most recent bugfixes), download the latest one from <a href="https://github.com/technomancy/leiningen/raw/preview/bin/lein.bat">github</a> 
          </li>
-         <li>Replace the old <tt>.bat</tt> script with the one you downloaded</li>
+         <li>Replace the old <tt>.bat</tt> script with the one you downloaded or use different name, e.g. <tt>lein2.bat</tt>. Different versions of leiningen can live happily next to each other without interfering.</li>
          <li>Change the version number of leiningen on line 3 of the <tt>.bat</tt> if needed. By default it is already set to the newest stable version of leiningen.</li>
          <li>Run <tt>lein self-install</tt> from the command prompt or download manually in case you didn't install an HTTP client (see installation instructions).</li> 
-         <li>From the command promp run the command <tt>lein version</tt>. Leiningen should now print the version that was currently installed.</li>
+         <li>From the command promp run the command <tt>lein version</tt> (or, of course,  <tt>lein2 version</tt> in case you renamed the script to <tt>lein2.bat</tt>). Leiningen should now print the version that was currently installed.</li>
          </ol>
 
           
